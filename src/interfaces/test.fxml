@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="880.0" style="-fx-background-color: WHITE;" stylesheets="@../application/application.css" xmlns="http://javafx.com" xmlns:fx="http://javafx.com" fx:controller="Controller.CondidatController">
+    <children>
+        <AnchorPane layoutY="53.0" prefHeight="237.0" prefWidth="867.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="7.0">
+            <children>
+                <TableView fx:id="TableCondidat" onMouseClicked="#selectcondidat" prefHeight="237.0" prefWidth="695.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="178.0">
+                    <columns>
+                        <TableColumn fx:id="cinC" prefWidth="71.0" style="-fx-alignment: center;" text="Cin" />
+                        <TableColumn fx:id="nomC" prefWidth="81.0" style="-fx-alignment: center;" text="Nom" />
+                        <TableColumn fx:id="prenomC" prefWidth="88.0" style="-fx-alignment: center;" text="Prenom" />
+                        <TableColumn fx:id="dnaisC" prefWidth="93.0" style="-fx-alignment: center;" text="Date naissance" />
+                        <TableColumn fx:id="sexeC" prefWidth="64.0" style="-fx-alignment: center;" text="Sexe" />
+                        <TableColumn fx:id="catC" prefWidth="60.0" style="-fx-alignment: center;" text="C_permis" />
+                        <TableColumn fx:id="dinsC" prefWidth="96.0" style="-fx-alignment: center;" text="Date inscription" />
+                        <TableColumn fx:id="telC" prefWidth="75.0" style="-fx-alignment: center;" text="Tel" />
+                        <TableColumn fx:id="etatC" prefWidth="62.0" style="-fx-alignment: center;" text="Etat" />
+                        <TableColumn fx:id="emailC" prefWidth="81.0" style="-fx-alignment: center;" text="Email" />
+                        <TableColumn fx:id="adressC" prefWidth="93.0" style="-fx-alignment: center;" text="Adresse" />
+                    </columns>
+                </TableView>
+                <ImageView fx:id="uploading_image" fitHeight="106.0" fitWidth="106.0" layoutX="741.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Button layoutX="758.0" layoutY="204.0" mnemonicParsing="false" onMouseClicked="#uploadphoto" style="-fx-background-color: #88C2EA;" text="Parcourir..." />
+                <Label fx:id="lab_url" layoutX="741.0" layoutY="171.0" prefHeight="17.0" prefWidth="106.0" />
+            </children>
+        </AnchorPane>
+        <Button layoutX="544.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#refreche" styleClass="btn-singin" stylesheets="@../application/application.css" text="Refreche" />
+        <Label layoutX="33.0" layoutY="18.0" text="Recherche" />
+        <Button layoutX="269.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#AddNewCondidat" prefWidth="70.0" style="-fx-background-color: #00FF68;" text="New" />
+        <Button layoutX="346.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#updatecondidat" prefWidth="70.0" style="-fx-background-color: #8FB2F4;" text="Update" />
+        <Button layoutX="423.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#deletecondidat" prefWidth="70.0" style="-fx-background-color: #F31616;" text="Delete" />
+        <ComboBox fx:id="comrecherche" layoutX="102.0" layoutY="14.0" prefHeight="25.0" prefWidth="106.0" />
+        <TextField fx:id="inputtext" layoutX="230.0" layoutY="14.0" prefHeight="25.0" prefWidth="198.0" />
+        <Button layoutX="455.0" layoutY="14.0" mnemonicParsing="false" onKeyPressed="#searchok" onMouseClicked="#searchok" styleClass="btn-singin" stylesheets="@../application/application.css" text="OK" />
+        <Label layoutX="8.0" layoutY="351.0" text="Nom" AnchorPane.leftAnchor="8.0" />
+        <Label layoutX="263.0" layoutY="351.0" text="Prenom" AnchorPane.leftAnchor="263.0" />
+        <Label layoutX="8.0" layoutY="401.0" text="Date naissance" AnchorPane.leftAnchor="8.0" />
+        <Label layoutX="265.0" layoutY="402.0" text="Sexe" AnchorPane.leftAnchor="265.0" />
+        <Label layoutX="547.0" layoutY="404.0" text="Adresse" AnchorPane.leftAnchor="547.0" />
+        <Label layoutX="543.0" layoutY="351.0" text="N° CIN" AnchorPane.leftAnchor="543.0" />
+        <Label layoutX="8.0" layoutY="450.0" text="Tel" AnchorPane.leftAnchor="8.0" />
+        <Label layoutX="547.0" layoutY="449.0" text="Etat" AnchorPane.leftAnchor="547.0" />
+        <Label layoutX="8.0" layoutY="500.0" text="Date d'inscreption" AnchorPane.leftAnchor="8.0" />
+        <Label layoutX="266.0" layoutY="500.0" text="catégorie de permis" />
+        <Label fx:id="condidatname" layoutX="642.0" layoutY="15.0" prefHeight="23.0" prefWidth="215.0" textFill="#5b00f8">
+            <font>
+                <Font name="Arial Black" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="last_name" layoutX="110.0" layoutY="347.0" AnchorPane.leftAnchor="110.0" />
+        <TextField fx:id="first_name" layoutX="381.0" layoutY="349.0" />
+        <DatePicker fx:id="date_naissance" layoutX="110.0" layoutY="397.0" prefHeight="25.0" prefWidth="149.0" AnchorPane.leftAnchor="110.0" />
+        <TextField fx:id="sexeid" layoutX="381.0" layoutY="400.0" />
+        <TextField fx:id="adress_name" layoutX="594.0" layoutY="397.0" prefHeight="25.0" prefWidth="198.0" />
+        <TextField fx:id="cin_number" layoutX="594.0" layoutY="347.0" />
+        <TextField fx:id="phone_number" layoutX="110.0" layoutY="446.0" AnchorPane.leftAnchor="110.0" />
+        <DatePicker fx:id="date_inscreption" layoutX="110.0" layoutY="496.0" prefHeight="25.0" prefWidth="149.0" AnchorPane.leftAnchor="110.0" />
+        <TextField fx:id="cat_permis" layoutX="381.0" layoutY="496.0" />
+        <TextField fx:id="etatid" layoutX="594.0" layoutY="445.0" />
+        <TextField fx:id="emailid" layoutX="381.0" layoutY="447.0" />
+        <Label layoutX="265.0" layoutY="450.0" text="Email" AnchorPane.leftAnchor="265.0" />
+    </children>
+</AnchorPane>

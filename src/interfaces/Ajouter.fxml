@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="347.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterController">
+   <children>
+      <Pane layoutX="55.0" layoutY="44.0" prefHeight="303.0" prefWidth="683.0" style="-fx-background-color: #E3B6DB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="44.0">
+         <children>
+            <TextField fx:id="nm" layoutX="27.0" layoutY="62.0" prefHeight="33.0" prefWidth="158.0" promptText="Nom" />
+            <TextField fx:id="prn" layoutX="229.0" layoutY="62.0" prefHeight="33.0" prefWidth="158.0" promptText="Prenom" />
+            <TextField fx:id="mail" layoutX="439.0" layoutY="62.0" prefHeight="33.0" prefWidth="149.0" promptText="Email" />
+            <TextField fx:id="stt" layoutX="122.0" layoutY="116.0" prefHeight="33.0" prefWidth="149.0" promptText="Statue" />
+            <TextField fx:id="tel" layoutX="348.0" layoutY="119.0" prefHeight="33.0" prefWidth="149.0" promptText="Phone" />
+            <Button defaultButton="true" layoutX="281.0" layoutY="240.0" mnemonicParsing="false" onAction="#ajouterAdhérent" style="-fx-border-radius: #B6E3DB;" text="Ajouter" />
+            <TextField fx:id="msg" layoutX="234.0" layoutY="178.0" prefHeight="33.0" prefWidth="149.0" promptText="message" />
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="683.0" text="  Ajouter adhérent" textFill="#9a0c93" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
